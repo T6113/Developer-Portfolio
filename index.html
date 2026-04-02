@@ -1,31 +1,268 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Software Engineering Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thomisha Myers | Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
+    <!-- Global Background -->
+    <div class="global-background">
+      <div class="global-particles" id="global-particles"></div>
+      <div class="global-gradient"></div>
+    </div>
 
-  <h1>Hi, I'm Thomisha</h1>
-  <p>Software Engineer | Automation | Data Tools</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">TM</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
-  <section>
-    <h2>Projects</h2>
-    <div id="projects"></div>
-  </section>
+    <!-- Hero/Landing Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="particles" id="particles"></div>
+        <div class="gradient-bg"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-name">
+            <span class="greeting">Hi, I'm</span>
+            <span class="name-text">Thomisha</span>
+          </h1>
+          <p class="hero-role">Aspiring Software Engineer</p>
+          <p class="hero-tagline">
+            Crafting digital solutions with automation, data tools, and modern
+            technologies
+          </p>
+          <div class="hero-buttons">
+            <a href="#about" class="btn btn-primary">Learn About Me</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <p>JavaScript, Python, APIs, Automation</p>
-  </section>
+    <!-- About Me Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">My journey in software development</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="about-card">
+              <div class="card-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Passionate Developer</h3>
+              <p>
+                I'm an aspiring software engineer with a passion for creating
+                innovative solutions through code. My journey began with
+                curiosity about how technology works, and has evolved into a
+                deep love for problem-solving and building meaningful digital
+                experiences.
+              </p>
+            </div>
+            <div class="about-card">
+              <div class="card-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3>Innovation Focused</h3>
+              <p>
+                I believe in the power of automation and data-driven solutions
+                to make life easier and more efficient. Whether it's
+                streamlining workflows or creating intuitive user interfaces,
+                I'm always looking for ways to innovate and improve.
+              </p>
+            </div>
+            <div class="about-card">
+              <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3>Future Goals</h3>
+              <p>
+                My goal is to contribute to meaningful projects that make a
+                positive impact. I'm constantly learning new technologies and
+                best practices, staying curious about emerging trends in
+                software development and data science.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Technologies and tools I work with</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="category-title">Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-skill="JavaScript">
+                <div class="skill-icon">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Python">
+                <div class="skill-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="HTML/CSS">
+                <div class="skill-icon">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <span class="skill-name">HTML/CSS</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="95"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Technologies</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-skill="APIs">
+                <div class="skill-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <span class="skill-name">APIs</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Automation">
+                <div class="skill-icon">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <span class="skill-name">Automation</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="88"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Data Tools">
+                <div class="skill-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <span class="skill-name">Data Tools</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Projects Section (Placeholder) -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Featured work and personal projects</p>
+        </div>
+        <div class="projects-placeholder">
+          <div class="placeholder-content">
+            <i class="fas fa-code-branch"></i>
+            <h3>Projects Coming Soon</h3>
+            <p>
+              This section will showcase my latest projects and development
+              work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <!-- Contact Section (Placeholder) -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Let's connect and build something amazing together
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:thomishamyers3@gmail.com"
+                  >thomishamyers3@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <a href="#" target="_blank">Connect with me</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <a href="#" target="_blank">View my code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
