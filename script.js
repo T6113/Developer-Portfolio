@@ -34,7 +34,7 @@ function setupMobileNavigation() {
     });
 
     // Close mobile menu when clicking on a link
-    navLinkItems.forEach((link) => {
+    navLinkItems.forEach(link => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
         navLinks.classList.remove("active");
@@ -43,7 +43,7 @@ function setupMobileNavigation() {
     });
 
     // Close mobile menu when clicking outside
-    document.addEventListener("click", (e) => {
+    document.addEventListener("click", e => {
       if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
         hamburger.classList.remove("active");
         navLinks.classList.remove("active");
@@ -60,8 +60,8 @@ function setupSmoothScrolling() {
   const scrollIndicator = document.querySelector(".scroll-indicator");
 
   // Handle navigation links
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
+  navLinks.forEach(link => {
+    link.addEventListener("click", e => {
       e.preventDefault();
       const targetId = link.getAttribute("href");
       const targetSection = document.querySelector(targetId);
@@ -77,8 +77,8 @@ function setupSmoothScrolling() {
   });
 
   // Handle hero buttons
-  heroButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
+  heroButtons.forEach(button => {
+    button.addEventListener("click", e => {
       e.preventDefault();
       const targetId = button.getAttribute("href");
       const targetSection = document.querySelector(targetId);
@@ -134,7 +134,7 @@ function updateActiveNavLink() {
 
   let currentSection = "";
 
-  sections.forEach((section) => {
+  sections.forEach(section => {
     const sectionTop = section.offsetTop - 100;
     const sectionHeight = section.offsetHeight;
 
@@ -146,7 +146,7 @@ function updateActiveNavLink() {
     }
   });
 
-  navLinks.forEach((link) => {
+  navLinks.forEach(link => {
     link.classList.remove("active");
     if (link.getAttribute("href") === `#${currentSection}`) {
       link.classList.add("active");
@@ -158,7 +158,7 @@ function updateActiveNavLink() {
 function setupSkillBars() {
   const skillItems = document.querySelectorAll(".skill-item");
 
-  skillItems.forEach((item) => {
+  skillItems.forEach(item => {
     const progressBar = item.querySelector(".skill-progress");
     const targetWidth = progressBar.getAttribute("data-width");
 
@@ -184,8 +184,8 @@ function setupIntersectionObserver() {
     rootMargin: "0px 0px -50px 0px",
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
 
@@ -227,8 +227,8 @@ function setupIntersectionObserver() {
     ".projects-placeholder",
   ];
 
-  elementsToObserve.forEach((selector) => {
-    document.querySelectorAll(selector).forEach((el) => {
+  elementsToObserve.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
       el.classList.add("fade-in-up");
       observer.observe(el);
     });
@@ -239,7 +239,7 @@ function setupIntersectionObserver() {
 function animateCounter(element) {
   const counters = element.querySelectorAll("[data-count]");
 
-  counters.forEach((counter) => {
+  counters.forEach(counter => {
     const target = parseInt(counter.getAttribute("data-count"));
     const duration = 2000;
     const step = target / (duration / 16);
@@ -309,7 +309,7 @@ function createParticles() {
 
 // Animate particles
 function animateParticles() {
-  particles.forEach((particle) => {
+  particles.forEach(particle => {
     particle.x += particle.vx;
     particle.y += particle.vy;
 
@@ -348,7 +348,7 @@ function setupParallax() {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll(".parallax");
 
-    parallaxElements.forEach((element) => {
+    parallaxElements.forEach(element => {
       const speed = element.getAttribute("data-speed") || 0.5;
       const yPos = -(scrolled * speed);
       element.style.transform = `translateY(${yPos}px)`;
@@ -376,7 +376,7 @@ window.addEventListener(
   throttle(() => {
     // Recreate particles for new window size
     createParticles();
-  }, 250),
+  }, 250)
 );
 
 // Loading animation
@@ -396,14 +396,14 @@ function setupCustomCursor() {
   cursor.classList.add("custom-cursor");
   document.body.appendChild(cursor);
 
-  document.addEventListener("mousemove", (e) => {
+  document.addEventListener("mousemove", e => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
   });
 
   // Add cursor interaction with buttons and links
   const interactiveElements = document.querySelectorAll("a, button, .btn");
-  interactiveElements.forEach((element) => {
+  interactiveElements.forEach(element => {
     element.addEventListener("mouseenter", () => {
       cursor.classList.add("cursor-hover");
     });
