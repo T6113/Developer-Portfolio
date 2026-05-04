@@ -13,7 +13,6 @@ function initializePortfolio() {
   setupSmoothScrolling();
   setupScrollAnimations();
   setupSkillBars();
-  createGlobalBackground();
   createParticles();
   animateParticles();
   setupIntersectionObserver();
@@ -236,29 +235,6 @@ function setupIntersectionObserver() {
   });
 }
 
-// Global Background Setup
-function createGlobalBackground() {
-  // Create global background container if it doesn't exist
-  let globalBg = document.querySelector(".global-background");
-  if (!globalBg) {
-    globalBg = document.createElement("div");
-    globalBg.classList.add("global-background");
-
-    // Create particles container
-    const globalParticles = document.createElement("div");
-    globalParticles.classList.add("global-particles");
-    globalParticles.id = "global-particles";
-
-    // Create gradient background
-    const globalGradient = document.createElement("div");
-    globalGradient.classList.add("global-gradient");
-
-    globalBg.appendChild(globalParticles);
-    globalBg.appendChild(globalGradient);
-    document.body.appendChild(globalBg);
-  }
-}
-
 // Animate counters (for about section stats)
 function animateCounter(element) {
   const counters = element.querySelectorAll("[data-count]");
@@ -285,11 +261,12 @@ function animateCounter(element) {
 
 // Particle System
 function createParticles() {
-  const particlesContainer =
-    document.getElementById("particles") ||
-    document.getElementById("global-particles");
+  const particlesContainer = document.getElementById("particles");
 
-  if (!particlesContainer) return;
+  if (!particlesContainer) {
+    console.log("Particles container not found");
+    return;
+  }
 
   const particleCount = window.innerWidth < 768 ? 30 : 60;
 
