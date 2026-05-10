@@ -8,16 +8,16 @@
 :root {
   /* Dark Theme Color Palette */
   --primary-bg: #0a0a0a;
-  --secondary-bg: #1a1a1a;
-  --accent-bg: #2a2a2a;
+  --secondary-bg: #151c1f;
+  --accent-bg: #1a2326;
   --primary-text: #ffffff;
-  --secondary-text: #b3b3b3;
-  --accent-text: #666666;
-  --primary-accent: #6366f1;
-  --secondary-accent: #8b5cf6;
-  --success-accent: #10b981;
-  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  --gradient-secondary: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  --secondary-text: #b3e6ea;
+  --accent-text: #5eead4;
+  --primary-accent: #14e0c7;
+  --secondary-accent: #00bcd4;
+  --success-accent: #1de9b6;
+  --gradient-primary: linear-gradient(135deg, #14e0c7 0%, #00bcd4 100%);
+  --gradient-secondary: linear-gradient(135deg, #151c1f 0%, #1a2326 100%);
 
   /* Typography */
   --font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -88,7 +88,7 @@ body {
   inset: 0;
   background: radial-gradient(
     ellipse 80% 80% at 50% 50%,
-    rgba(99, 102, 241, 0.05) 0%,
+    rgba(20, 224, 199, 0.08) 0%,
     transparent 70%
   );
   animation: globalGradientShift 12s ease-in-out infinite;
@@ -421,7 +421,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(99, 102, 241, 0.1),
+    rgba(20, 224, 199, 0.12),
     transparent
   );
   transition: left 0.6s ease;
@@ -430,7 +430,7 @@ body {
 .about-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-accent);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 20px 40px rgba(20, 224, 199, 0.1);
 }
 
 .about-card:hover::before {
@@ -678,7 +678,7 @@ body {
 .contact-item:hover {
   transform: translateY(-5px);
   border-color: var(--primary-accent);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 20px 40px rgba(20, 224, 199, 0.1);
 }
 
 .contact-icon {
@@ -920,7 +920,7 @@ body {
 .about-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-accent);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 20px 40px rgba(20, 224, 199, 0.1);
 }
 
 .about-card:hover::before {
@@ -1008,6 +1008,87 @@ body {
   font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--primary-accent);
+  /* Projects Grid Modern Cards */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-2xl);
+  }
+
+  .project-card {
+    background: var(--secondary-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(20, 224, 199, 0.06);
+    border: 1.5px solid rgba(20, 224, 199, 0.13);
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s;
+    display: flex;
+    align-items: stretch;
+    min-height: 160px;
+    padding: 0;
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(20, 224, 199, 0.18);
+    border-color: var(--primary-accent);
+  }
+
+  .project-card-content {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .project-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary-text);
+    margin: 0;
+  }
+
+  .project-links {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+
+  .project-link {
+    color: var(--primary-accent);
+    font-size: 1.3rem;
+    transition:
+      color 0.2s,
+      text-shadow 0.2s;
+    text-decoration: none;
+  }
+
+  .project-link:hover {
+    color: var(--success-accent);
+    text-shadow: 0 0 8px var(--primary-accent);
+  }
+
+  .project-description {
+    color: var(--secondary-text);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .project-tech {
+    color: var(--accent-text);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    margin-top: auto;
+    letter-spacing: 0.03em;
+  }
   margin-bottom: var(--spacing-xl);
   text-align: center;
 }
