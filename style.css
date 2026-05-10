@@ -1102,6 +1102,107 @@ body {
   transform: translateX(0);
 }
 
+/* === FINAL LOCKED OVERRIDES: CONTACT + FOOTER === */
+#contact {
+  padding: var(--spacing-2xl) 0 !important;
+}
+
+#contact .section-header {
+  margin-bottom: var(--spacing-xl) !important;
+}
+
+#contact .section-subtitle {
+  max-width: 520px !important;
+  font-size: var(--font-size-base) !important;
+}
+
+#contact .contact-info {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(120px, auto)) !important;
+  justify-content: center !important;
+  gap: 1.25rem !important;
+  max-width: 640px !important;
+}
+
+#contact .contact-item {
+  min-height: 0 !important;
+  padding: 0.25rem !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.6rem !important;
+  text-align: center !important;
+}
+
+#contact .contact-item:hover {
+  transform: translateY(-2px) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#contact .contact-icon {
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(20, 224, 199, 0.35) !important;
+  background: rgba(20, 224, 199, 0.09) !important;
+  color: var(--primary-accent) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#contact .contact-item:hover .contact-icon {
+  border-color: rgba(20, 224, 199, 0.7) !important;
+  box-shadow: 0 0 16px rgba(20, 224, 199, 0.2) !important;
+}
+
+#contact .contact-item h4 {
+  margin: 0 !important;
+  color: var(--primary-text) !important;
+  font-size: var(--font-size-base) !important;
+  font-weight: 600 !important;
+}
+
+.site-footer {
+  padding: var(--spacing-lg) 0 var(--spacing-xl) !important;
+  border-top: 1px solid rgba(20, 224, 199, 0.14) !important;
+  background: rgba(8, 12, 14, 0.65) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.site-footer p {
+  margin: 0 !important;
+  text-align: center !important;
+  color: var(--secondary-text) !important;
+  font-size: var(--font-size-sm) !important;
+  letter-spacing: 0.02em !important;
+}
+
+@media (max-width: 768px) {
+  #contact .contact-info {
+    grid-template-columns: repeat(3, minmax(88px, 1fr)) !important;
+    gap: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact .contact-info {
+    grid-template-columns: repeat(3, minmax(78px, 1fr)) !important;
+    gap: 0.7rem !important;
+  }
+
+  #contact .contact-item h4 {
+    font-size: var(--font-size-sm) !important;
+  }
+}
+
 /* Contact section only: no card containers */
 #contact .contact-info {
   grid-template-columns: repeat(3, minmax(120px, auto));
