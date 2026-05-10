@@ -79,8 +79,14 @@ function setupSmoothScrolling() {
   // Handle hero buttons
   heroButtons.forEach(button => {
     button.addEventListener("click", e => {
-      e.preventDefault();
       const targetId = button.getAttribute("href");
+
+      // Only intercept in-page anchors; allow external links (resume) to open normally.
+      if (!targetId || !targetId.startsWith("#")) {
+        return;
+      }
+
+      e.preventDefault();
       const targetSection = document.querySelector(targetId);
 
       if (targetSection) {
