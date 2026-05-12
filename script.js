@@ -12,7 +12,6 @@ function initializePortfolio() {
   setupMobileNavigation();
   setupSmoothScrolling();
   setupScrollAnimations();
-  setupSkillBars();
   createParticles();
   animateParticles();
   setupIntersectionObserver();
@@ -57,8 +56,6 @@ function setupMobileNavigation() {
 function setupSmoothScrolling() {
   const navLinks = document.querySelectorAll(".nav-link");
   const heroButtons = document.querySelectorAll(".hero-buttons .btn");
-  const scrollIndicator = document.querySelector(".scroll-indicator");
-
   // Handle navigation links
   navLinks.forEach(link => {
     link.addEventListener("click", e => {
@@ -98,20 +95,6 @@ function setupSmoothScrolling() {
       }
     });
   });
-
-  // Handle scroll indicator
-  if (scrollIndicator) {
-    scrollIndicator.addEventListener("click", () => {
-      const skillsSection = document.querySelector("#skills");
-      if (skillsSection) {
-        const offsetTop = skillsSection.offsetTop - 70;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        });
-      }
-    });
-  }
 }
 
 // Scroll Animations
@@ -160,29 +143,6 @@ function updateActiveNavLink() {
   });
 }
 
-// Skill Bars Animation
-function setupSkillBars() {
-  const skillItems = document.querySelectorAll(".skill-item");
-
-  skillItems.forEach(item => {
-    const progressBar = item.querySelector(".skill-progress");
-    const targetWidth = progressBar.getAttribute("data-width");
-
-    // Add hover effects
-    item.addEventListener("mouseenter", () => {
-      item.style.transform = "translateX(5px)";
-      item.style.transition = "transform 0.3s ease";
-    });
-
-    item.addEventListener("mouseleave", () => {
-      item.style.transform = "translateX(0)";
-    });
-
-    // Store the target width for intersection observer
-    progressBar.targetWidth = targetWidth;
-  });
-}
-
 // Intersection Observer for animations
 function setupIntersectionObserver() {
   const observerOptions = {
@@ -194,16 +154,6 @@ function setupIntersectionObserver() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-
-        // Animate skill bars
-        if (entry.target.classList.contains("skill-item")) {
-          const progressBar = entry.target.querySelector(".skill-progress");
-          if (progressBar && progressBar.targetWidth) {
-            setTimeout(() => {
-              progressBar.style.width = progressBar.targetWidth + "%";
-            }, 200);
-          }
-        }
 
         // Animate sections
         if (entry.target.classList.contains("section-header")) {
@@ -225,7 +175,6 @@ function setupIntersectionObserver() {
 
   // Observe elements for animation
   const elementsToObserve = [
-    ".skill-item",
     ".section-header",
     ".about-card",
     ".stat-item",
