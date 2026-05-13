@@ -92,35 +92,65 @@
           <p class="section-subtitle">Featured work and personal projects</p>
         </div>
         <div class="projects-grid">
-          <!-- Example Project Card -->
+          <!-- Featured Project Card -->
           <div class="project-card">
+            <a
+              class="project-card-media"
+              href="https://t6113.github.io/Expo-Planets/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open ExpoPlanets live site"
+            >
+              <img
+                src="assets/Portfolio One.png"
+                alt="ExpoPlanets project preview"
+                class="project-preview-image"
+              />
+            </a>
             <div class="project-card-content">
               <div class="project-card-header">
-                <h3 class="project-title">Portfolio Website</h3>
+                <h3 class="project-title">ExpoPlanets</h3>
                 <div class="project-links">
                   <a
-                    href="#"
+                    href="https://github.com/T6113/Expo-Planets"
                     class="project-link"
                     title="GitHub"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open ExpoPlanets GitHub repository"
                     ><i class="fab fa-github"></i
                   ></a>
                   <a
-                    href="#"
+                    href="https://t6113.github.io/Expo-Planets/"
                     class="project-link"
-                    title="Live Demo"
+                    title="Live Site"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open ExpoPlanets live site"
                     ><i class="fas fa-external-link-alt"></i
                   ></a>
                 </div>
               </div>
               <p class="project-description">
-                A modern, responsive portfolio website to showcase my work,
-                skills, and contact info. Built with vanilla JS, CSS, and HTML.
+                A responsive NASA-inspired space exploration web app that allows
+                users to explore astronomy content, favorite discoveries, and
+                interact with dynamic UI components using modern frontend
+                development techniques.
               </p>
-              <div class="project-tech">HTML, CSS, JavaScript</div>
+              <div
+                class="project-tech-pills"
+                aria-label="ExpoPlanets tech stack"
+              >
+                <span class="project-tech-pill">HTML</span>
+                <span class="project-tech-pill">CSS</span>
+                <span class="project-tech-pill">JavaScript</span>
+                <span class="project-tech-pill">NASA API</span>
+                <span class="project-tech-pill">Responsive Design</span>
+              </div>
             </div>
           </div>
+
+          <!-- Duplicate this card block to add more projects -->
           <div class="project-card">
             <div class="project-card-content">
               <div class="project-card-header">
@@ -139,7 +169,14 @@
                 A Python bot that automates repetitive web tasks and data
                 collection, saving hours of manual work.
               </p>
-              <div class="project-tech">Python, Selenium, APIs</div>
+              <div
+                class="project-tech-pills"
+                aria-label="Task Automation Bot tech stack"
+              >
+                <span class="project-tech-pill">Python</span>
+                <span class="project-tech-pill">Selenium</span>
+                <span class="project-tech-pill">APIs</span>
+              </div>
             </div>
           </div>
           <!-- Add more project cards as needed -->
@@ -158,46 +195,57 @@
         </div>
         <div class="skills-grid">
           <div class="skill-category">
-            <h3 class="category-title">Languages</h3>
-            <div class="skill-badges">
-              <span class="skill-badge">JavaScript</span>
-              <span class="skill-badge">Python</span>
-              <span class="skill-badge">SQL</span>
+            <div class="skill-card-header">
+              <span class="skill-card-icon" aria-hidden="true"
+                ><i class="fas fa-code"></i
+              ></span>
+              <h3 class="category-title">Frontend</h3>
+            </div>
+            <div class="tech-pill-group">
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">CSS3</span>
+              <span class="tech-pill">JavaScript (ES6+)</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Responsive Design</span>
+              <span class="tech-pill">Flexbox</span>
+              <span class="tech-pill">CSS Grid</span>
             </div>
           </div>
 
           <div class="skill-category">
-            <h3 class="category-title">Frontend</h3>
-            <div class="skill-badges">
-              <span class="skill-badge">HTML5</span>
-              <span class="skill-badge">CSS3</span>
-              <span class="skill-badge">React</span>
-              <span class="skill-badge">Responsive Design</span>
-              <span class="skill-badge">Flexbox</span>
-              <span class="skill-badge">CSS Grid</span>
+            <div class="skill-card-header">
+              <span class="skill-card-icon" aria-hidden="true"
+                ><i class="fas fa-server"></i
+              ></span>
+              <h3 class="category-title">Backend &amp; Deployment</h3>
+            </div>
+            <div class="tech-pill-group">
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Express.js</span>
+              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">REST APIs</span>
+              <span class="tech-pill">JWT Authentication</span>
+              <span class="tech-pill">GitHub Pages</span>
+              <span class="tech-pill">Google Cloud</span>
             </div>
           </div>
 
           <div class="skill-category">
-            <h3 class="category-title">Backend &amp; Tools</h3>
-            <div class="skill-badges">
-              <span class="skill-badge">Node.js</span>
-              <span class="skill-badge">Express.js</span>
-              <span class="skill-badge">MongoDB</span>
-              <span class="skill-badge">REST APIs</span>
-              <span class="skill-badge">Git</span>
-              <span class="skill-badge">GitHub</span>
-              <span class="skill-badge">NPM</span>
+            <div class="skill-card-header">
+              <span class="skill-card-icon" aria-hidden="true"
+                ><i class="fas fa-database"></i
+              ></span>
+              <h3 class="category-title">Data &amp; Tools</h3>
             </div>
-          </div>
-
-          <div class="skill-category">
-            <h3 class="category-title">Data &amp; Analytics</h3>
-            <div class="skill-badges">
-              <span class="skill-badge">APIs</span>
-              <span class="skill-badge">Automation</span>
-              <span class="skill-badge">Data Visualization</span>
-              <span class="skill-badge">Analytics</span>
+            <div class="tech-pill-group">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">Data Visualization</span>
+              <span class="tech-pill">Git</span>
+              <span class="tech-pill">GitHub</span>
+              <span class="tech-pill">NPM</span>
+              <span class="tech-pill">Agile/Scrum</span>
+              <span class="tech-pill">Figma</span>
             </div>
           </div>
         </div>
