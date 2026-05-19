@@ -370,9 +370,9 @@ body {
 
 .hero-visual-frame {
   position: relative;
-  width: min(100%, 420px);
-  aspect-ratio: 4 / 5;
-  border-radius: 28px;
+  width: min(100%, 380px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   border: 1px solid rgba(20, 224, 199, 0.18);
   background: linear-gradient(
     180deg,
@@ -385,9 +385,21 @@ body {
   overflow: hidden;
 }
 
+.hero-portrait-image {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
 .hero-visual-glow {
   position: absolute;
   inset: -20%;
+  z-index: 1;
+  pointer-events: none;
   background:
     radial-gradient(
       circle at 35% 35%,
@@ -1015,7 +1027,7 @@ section {
   }
 
   .hero-visual-frame {
-    width: min(100%, 360px);
+    width: min(100%, 320px);
   }
 
   .hero-buttons {
@@ -1093,9 +1105,8 @@ section {
     min-height: 240px;
   }
 
-  .hero-visual-orbit {
-    width: 160px;
-    height: 160px;
+  .hero-visual-frame {
+    width: min(100%, 260px);
   }
 
   .contact-item {
